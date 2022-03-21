@@ -141,3 +141,123 @@ nav {
     top: 0vh;
     transform: rotate(90deg);
 }
+/* middle bar style*/
+
+#burgerbtn div {
+    border: none;
+    position: relative;
+    left: 0.3vh;
+    width: 4vh;
+    height: 0.5vh;
+    background-color: var(--burgerbtnstripes);
+    transition: 0.4s;
+}
+
+/* top and bottom style*/
+
+#burgerbtn div:before, #burgerbtn div:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 4vh;
+    height: 0.5vh;
+    background-color: var(--burgerbtnstripes);
+    transition: 0.4s;
+}
+
+/* Classes for dropdown menu opened or closed */
+
+.closed ul {
+    display: none;
+}
+
+.open ul {
+    display: block;
+}
+
+/* The side navigation menu */
+
+.sidemenu {
+    height: 100vh;
+    /* 100% Full-height */
+    width: 0vw;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: -1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    background-color: var(--headerclr);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    right: 0;
+}
+
+.sidemenuwidth {
+    width: 100vw;
+}
+
+
+/* dropdown funtionality */
+
+.item ul, .sub-item ul {
+    overflow: hidden;
+    height: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.item input:checked~ul, .sub-item input:checked~ul {
+    overflow: visible;
+    height: 13vh;
+}
+
+.item input {
+    display: none;
+}
+
+/* Styling of dropdown and dropdown items*/
+
+.item-container {
+    margin-top: 43.6vh;
+    width: 100%;
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+    font-size: 2vh;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+.item a {
+    margin-top: 1vh;
+    width: 100%;
+    background-color: var(--sideMenuItemClr);
+    display: block;
+    z-index: 3;
+    position: relative;
+    line-height: 6vh;
+    padding-left: 5vw;
+    border-left: 0.4vh solid var(--logo_color);
+}
+
+.item label {
+    margin-top: 1vh;
+    width: 100%;
+    background-color: var(--sideMenuItemClr);
+    display: block;
+    z-index: 3;
+    position: relative;
+    line-height: 6vh;
+    padding-left: 5vw;
+    border-left: 0.4vh solid var(--logo_color);
+}
+
+.sub-item label, .sub-item a {
+    padding-left: 15vw;
+    margin-top: 0;
+}
