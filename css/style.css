@@ -30,3 +30,114 @@ html {
     --textlinkhoverclr: rgb(156, 1, 156);
     font-size: 2vh;
 }
+body {
+    background-color: var(--backgrndColor);
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* whole page grid - general template*/
+.pagewrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 9vh auto 7vh;
+    grid-template-areas: "nav" "content" "footer";
+}
+
+/* header bar positon, color and size*/
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: var(--headerclr);
+    height: 9vh;
+    z-index: 1;
+    grid-row: nav;
+}
+
+/* Content placement*/
+
+.content {
+    grid-row: content;
+}
+
+/* The Logo sizing and some positioning*/
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+.logo a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.logo img {
+    height: 7vh;
+    margin: 1vh;
+}
+
+.logo p {
+    width: 100%;
+    padding-top: 2.5vh;
+    font-size: 4vh;
+    text-align: center;
+    line-height: 100%;
+    margin: 0;
+    margin-right: 9vh;
+}
+
+
+/*Hamburger placement*/
+
+#burgerbtn {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    background: var(--burgerbtncolor);
+    width: 6.5vh;
+    height: 6.2vh;
+    border-radius: 3.5vh 0vh 0vh 3.5vh;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+}
+/* Burgerbutton border normal color*/
+
+.blackborder {
+    border: 0.4vh solid var(--burgerbtncolor);
+    border-right: solid var(--burgerbtncolor);
+}
+
+/* positioning of lower and higher line*/
+
+.blackborder div:before, .blackborder div:after {
+    top: -1.3vh;
+}
+
+/* Moves lower bar down*/
+
+.blackborder div:after {
+    top: 1.3vh;
+}
+
+/* Burgerbutton border color when menu open + animation for burger*/
+
+.blueborder {
+    border: 0.4vh solid var(--burgerbtncolor);
+}
+
+.blueborder div {
+    transform: rotate(135deg);
+    background-color: var(--headerclr);
+}
+
+.blueborder div:before, .blueborder div:after {
+    top: 0vh;
+    transform: rotate(90deg);
+}
