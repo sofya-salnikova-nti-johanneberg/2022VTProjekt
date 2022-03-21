@@ -1,1 +1,32 @@
 /* Denna fil skall innehålla din CSS kod */
+body, body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: 0;
+    font-size: unset;
+    color: white;
+    text-decoration: unset;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+ 
+:root {
+    --headerclr: #000;
+    --logo_color: #2525e5;
+    --burgerbtncolor: #0d53c3;
+    --burgerbtnstripes: rgb(211, 196, 65);
+    --blogpostcolor: #202020;
+    --sideMenuItemClr: #202020;
+    --backgrndClr: #181818;
+    /*article colors*/
+    --figcaptionclr: rgb(196, 133, 40);
+    --h1clr: #929292;
+    --h2clr: hsl(000, 0%, 40%);
+    --h3clr: #7a7a7a;
+    --paragrafclr: rgb(148, 148, 148);
+    --textlinkclr: rgb(150, 65, 150);
+    --textlinkhoverclr: rgb(156, 1, 156);
+    font-size: 2vh;
+}
