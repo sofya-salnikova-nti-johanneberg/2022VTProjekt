@@ -11,7 +11,7 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --headerclr: #000;
+    --headerclr: rgb(255, 255, 255);
     --logo_color: #2525e5;
     --burgerbtncolor: #0d53c3;
     --burgerbtnstripes: rgb(211, 196, 65);
@@ -20,9 +20,9 @@ html {
     --backgrndClr: #181818;
     /*article colors*/
     --figcaptionclr: rgb(196, 133, 40);
-    --h1clr: #929292;
-    --h2clr: hsl(000, 0%, 40%);
-    --h3clr: #7a7a7a;
+    --h1clr: #ffffff;
+    --h2clr: rgb(255, 255, 255);
+    --h3clr: #ffffff;
     --paragrafclr: rgb(148, 148, 148);
     --textlinkclr: rgb(150, 65, 150);
     --textlinkhoverclr: rgb(156, 1, 156);
