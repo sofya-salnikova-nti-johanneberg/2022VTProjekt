@@ -706,8 +706,8 @@ footer span2 {
 
 /* Make the images invisible by default */
 .Containers {
-  display: none;
-}
+    display: none;
+  }
 
 /* forward & Back buttons */
 .Back, .forward {
