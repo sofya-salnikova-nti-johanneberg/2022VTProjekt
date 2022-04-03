@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Ikea - Hem</title>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'wwr5jle',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
 </head>
 <body>
     <div class="pagewrapper">
         <nav id="nav">
             <div class="logo">
                 <a href="index.html">
-                    <img src="/img/Logga_Ikea.png" alt=""> <p>Hem</p> 
+                    <img src="img/NEW_IKEA_POSTERLOGO.png" alt=""> <p>Hem</p> 
                 </a>
             </div>
             <div id="sideMenu" class="sidemenu">
@@ -25,12 +35,12 @@
                         <input type="checkbox" id="B">
                         <label for="B">Sortiment</label>
                         <ul>
-                            <li><a href="/sortement/kok.html">Kök</a></li>
-                            <li><a href="/sortement/badrum.html">Badrum</a></li>
+                            <li><a href="sortement/kok.html">Kök</a></li>
+                            <li><a href="sortement/badrum.html">Badrum</a></li>
                         </ul>
                     </div>
                     <div class="item">
-                        <a href="/affarer/hittaoss.html">Hitta oss</a>
+                        <a href="affarer/hittaoss.html">Hitta oss</a>
                     </div>
                 </div>
             </div>
@@ -64,6 +74,7 @@
                     <p>Klicka på bilden för att se mer!</p>
                 </figcaption>
             </article>
+
             <article id="project_shadow_dash">
                 <p class="title">Fina affischer för badrummet</p>
                 <figure class="size-2">

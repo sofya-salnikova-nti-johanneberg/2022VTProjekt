@@ -11,19 +11,20 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --headerclr: rgb(255, 255, 255);
-    --logo_color: #2525e5;
-    --burgerbtncolor: #0d53c3;
-    --burgerbtnstripes: rgb(211, 196, 65);
-    --blogpostcolor: #202020;
+    --headerclr: rgb(250, 250, 250);
+    --logo_color: #920e2b;
+    --burgerbtncolor: #920e2b;
+    --burgerbtnstripes: rgb(32, 32, 28);
+    --blogpostcolor: #ffffff;
     --sideMenuItemClr: #202020;
     --backgrndClr: #181818;
+    --creator_color: #941a1a;
     /*article colors*/
     --figcaptionclr: rgb(196, 133, 40);
-    --h1clr: #ffffff;
-    --h2clr: rgb(255, 255, 255);
-    --h3clr: #ffffff;
-    --paragrafclr: rgb(148, 148, 148);
+    --h1clr: #929292;
+    --h2clr: hsl(000, 0%, 40%);
+    --h3clr: #7a7a7a;
+    --paragrafclr: rgb(68, 67, 67);
     --textlinkclr: rgb(150, 65, 150);
     --textlinkhoverclr: rgb(156, 1, 156);
     font-size: 2vh;
@@ -40,7 +41,21 @@ body {
     display: grid;
     grid-template-rows: 9vh auto 7vh;
     grid-template-areas: "nav" "content" "footer";
+    
 }
+.pagewrapper2 {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 9vh auto auto 7vh;
+    grid-template-columns: 7vh auto 7vh;
+    grid-template-areas: "nav nav nav"
+     "content content content" 
+     "b b b"
+     "footer footer footer";
+    
+}
+
 
 /* header bar positon, color and size*/
 nav {
@@ -50,13 +65,54 @@ nav {
     height: 9vh;
     z-index: 1;
     grid-row: nav;
+    grid-column: nav;
 }
 
 /* Content placement*/
 
 .content {
     grid-row: content;
+    grid-column: content;
+    align-content: center;
+
 }
+.content2 {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: row wrap;
+    grid-column: content;
+    grid-row: content;   
+    justify-content: space-evenly;
+}
+.b{
+    grid-column: b;
+    grid-row: b;
+}
+.content3{
+    grid-row: content;
+    grid-column: content;
+    display: grid;
+    grid-template-rows: 40% 40% 20%;
+    grid-template-columns: 20% 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a1 a2 a3 a4 a5"
+    "b1 b2 b3 b4 b5"
+    "c1 c2 c4 c4 c5";
+}
+.content4{
+    grid-row: content;
+    grid-column: content;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    justify-content: center;
+    grid-template-areas: 
+    "x x y z"
+    "x x y z"
+    "x x y z"
+}
+
 
 /* The Logo sizing and some positioning*/
 
@@ -299,14 +355,88 @@ article {
     display: grid;
     grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
     background-color: var(--blogpostcolor);
-    width: 90vw;
+    width: auto;
     margin: 5vw 5vw 5vw 5vw;
     border-radius: 2vw;
     height: auto;
+    
+    -webkit-box-shadow: 10px 15px 52px -15px rgba(133,133,133,1);
+    -moz-box-shadow: 10px 15px 52px -15px rgba(133,133,133,1);
+    box-shadow: 10px 15px 52px -15px rgba(133,133,133,1);
 }
-
+#article2 {
+    display: grid;
+    grid-template-columns: 12fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+    background-color: var(--blogpostcolor);
+    width: auto;
+    margin: 5vw 5vw 5vw 5vw;
+    border-radius: 5vw;
+    height: auto;
+    min-width: 30%; 
+    
+}
+#article3 {
+    display: grid;
+    grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+    background-color: var(--blogpostcolor);
+    width: auto;
+    margin: 1vw 1vw 1vw 1vw;
+    border-radius: 2vw;
+    height: 20vh;
+    align-content: center;
+    
+}
+#article4 {
+    display: grid;
+    grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+    background-color: var(--blogpostcolor);
+    width: 20vw;
+    margin: 1vw 1vw 1vw 1vw;
+    border-radius: 2vw;
+    height: auto;
+    align-content: center;
+    
+}
+#article5 {
+    grid-area: x;
+    background-color: var(--blogpostcolor);
+    width: fit-content;
+    margin: 10;
+    border-radius: 2vw;
+    height: 70vh;
+    
+}
+#article6 {
+    grid-area: y;
+    background-color: var(--blogpostcolor);
+    width: fit-content;
+    margin: 10;
+    border-radius: 2vw;
+    height: fit-content;
+}
+#article7 {
+    grid-area: z;
+    background-color: var(--blogpostcolor);
+    width: fit-content;
+    margin: 10;
+    border-radius: 2vw;
+    height: fit-content;
+}
+#article8 {
+    display: grid;
+    grid-template-columns: 12fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+    background-color: var(--blogpostcolor);
+    width: auto;
+    margin: 2vw 2vw 2vw 2vw;
+    border-radius: 2vw;
+    height: fit-content;
+    min-width: 30%; 
+    margin-top: 80%;
+    
+}
 article * {
     grid-column: start / end;
+   
 }
 
 /* Specific styling of general text types*/
@@ -337,9 +467,14 @@ h3 {
 }
 
 p {
-    font: 400 1.0rem/1.5 "Helvetica";
+    font-family: permanent-marker, sans-serif;
+
+    font-weight: 400;
+    
+    font-style: normal;
     color: var(--paragrafclr);
 }
+
 
 figcaption p {
     font: 400 1.0rem/1.5 "Helvetica";
@@ -360,21 +495,7 @@ p a:hover {
     text-decoration: underline;
 }
 
-.gallery {
-    width: 100%;
-    height: auto;
-    border-top: 2px solid var(--paragrafclr);
-    padding: 2vw 0 2vw 0;
-}
 
-.gallery img {
-    margin: 1vw 0 1vw 0
-}
-
-.img-g {
-    width: 100%;
-    grid-area: img1;
-}
 
 .title {
     margin-top: 1.2rem;
@@ -413,11 +534,18 @@ p a:hover {
 .size-4 {
     grid-column: 1/8;
 }
+.size-5{
+    grid-auto-flow: row;
+}
 
 .size-1 img, .size-2 img, .size-3 img, .size-4 img {
     width: 100%;
 }
-
+.size-5 img{
+    width: auto;
+    height: auto;
+ 
+}
 /* picture caption placement*/
 
 figcaption {
@@ -446,6 +574,7 @@ figcaption {
 
 footer {
     grid-row: footer;
+    grid-column: footer;
     width: 100%;
     background-color: var(--headerclr);
     height: 7vh;
@@ -464,6 +593,9 @@ footer p {
 footer span {
     color: var(--logo_color);
 }
+footer span2 {
+    color:var(--creator_color)
+}
 
 /* Desktop styling */
 @media screen and (min-width: 800px) {
@@ -477,7 +609,26 @@ footer span {
         width: 30vw;
         height: auto;
     }
-    
+    #article2 {
+        display: grid;
+        grid-template-columns: 1fr 5% [start] 20% 50% 20% [end] 5% 1fr;
+        background-color: var(--blogpostcolor);
+        width: 23vw;
+        margin: 1vw 1vw 1vw 1vw;
+        border-radius: 2vw;
+        height: auto;
+        
+    }
+    #article10 {
+        display: grid;
+        grid-template-columns: 1fr 5% [start] 20% 50% 20% [end] 5% 1fr;
+        background-color: var(--blogpostcolor);
+        width: auto;
+        margin: 1vw 1vw 1vw 1vw;
+        border-radius: 2vw;
+        height: auto;
+        
+    }
     .item-container {
         margin-top: 12vh;
     }
@@ -511,7 +662,7 @@ footer span {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   
     .content4{
         width: 100%;
@@ -520,7 +671,7 @@ footer span {
         align-content: center;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
+        grid-template-rows: 25% 25% 25% 25%;
         grid-template-areas: 
         "x x"
         "x x"
@@ -529,15 +680,13 @@ footer span {
         ;
        
     }
+    #article5{
+        margin: 3vw 2vw 2vw 3vw;
+        height: fit-content;
+    }
+
+
 }
-
-#article5{
-    margin: 3vw 2vw 2vw 3vw;
-    height: fit-content;
-}
-
-
-
 
 /* TEST */
 
@@ -545,99 +694,98 @@ footer span {
 
 
 .slideshow-container {
-max-width: 1000px;
-position: relative;
-margin: auto;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
 /* Make the images invisible by default */
 .Containers {
-display: none;
+  display: none;
 }
 
 /* forward & Back buttons */
 .Back, .forward {
-cursor: pointer;
-position: absolute;
-top: 48%;
-width: auto;
-margin-top: -23px;
-padding: 17px;
-color: grey;
-font-weight: bold;
-font-size: 19px;
-transition: 0.4s ease;
-border-radius: 0 5px 5px 0;
-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
 }
 
 /* Place the "forward button" to the right */
 .forward {
-right: 0;
-border-radius: 4px 0 0 4px;
+  right: 0;
+  border-radius: 4px 0 0 4px;
 }
 
 /*when the user hovers,add a black background with some little opacity */
 .Back:hover, .forward:hover {
-background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.8);
 }
 
 /* Caption Info */
 .Info {
-color: #131212;
-font-size: 16px;
-padding: 10px 14px;
-position: absolute;
-bottom: 10px;
-width: 100%;
-text-align: center;
-font-family: permanent-marker, sans-serif;
+  color: #131212;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: permanent-marker, sans-serif;
 
-font-weight: 400;
-
-font-style: normal;
+    font-weight: 400;
+    
+    font-style: normal;
 }
 
 /* Worknumbering (1/3 etc) */
 .MessageInfo {
-color: #f2f2f3;
-font-size: 14px;
-padding: 10px 14px;
-position: absolute;
-top: 0;
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
 }
 
 /* The circles or bullets and indicators */
 .dots {
-cursor: pointer;
-height: 16px;
-width: 16px;
-margin: 0 3px;
-background-color: #acc;
-border-radius: 50%;
-display: inline-block;
-transition: background-color 0.5s ease;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
 }
 
 .enable, .dots:hover {
-background-color: #717161;
+  background-color: #717161;
 }
 
 /* Faint animation */
 .fade {
--webkit-animation-name: fade;
--webkit-animation-duration: 1.4s;
-animation-name: fade;
-animation-duration: 1.4s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
 }
 
 @-webkit-keyframes fade {
-from {opacity: .5}
-to {opacity: 2}
+  from {opacity: .5}
+  to {opacity: 2}
 }
 
 @keyframes fade {
-from {opacity: .5}
-to {opacity: 2}
-
+  from {opacity: .5}
+  to {opacity: 2}
 }
