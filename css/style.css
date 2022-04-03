@@ -20,7 +20,7 @@ html {
     --backgrndClr: #181818;
     --creator_color: #941a1a;
     /*article colors*/
-    --figcaptionclr: rgb(196, 133, 40);
+    --figcaptionclr: rgb(138, 1, 1);
     --h1clr: #929292;
     --h2clr: hsl(000, 0%, 40%);
     --h3clr: #7a7a7a;
@@ -479,6 +479,11 @@ p {
 figcaption p {
     font: 400 1.0rem/1.5 "Helvetica";
     color: var(--figcaptionclr);
+    font-family: permanent-marker, sans-serif;
+
+    font-weight: 400;
+    
+    font-style: normal;
 }
 
 strong {
